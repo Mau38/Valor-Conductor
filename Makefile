@@ -8,9 +8,9 @@ main:
 
 all:
 	cd ui/main-window \
-		&& npm run build:react
+		&& NODE_OPTIONS=--openssl-legacy-provider npm run build:react
 	cd ui/stdout \
-	    && npm run build
+	    && NODE_OPTIONS=--openssl-legacy-provider npm run build
 	RUST_LOG=info cargo run
 
 setup:
