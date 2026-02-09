@@ -37,17 +37,17 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
         name: Ubuntu
     - name: Archive Raw Application
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: Conductor_ubuntu-latest
         path: target/release/conductor
     - name: Archive DEB
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
           name: Conductor.deb
           path: target/release/bundle/deb/*.deb
     - name: Archive RPM
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
           name: Conductor.rpm
           path: target/release/rpmbuild/RPMS/x86_64/*.rpm
@@ -77,7 +77,7 @@ jobs:
         token: ${{ secrets.GITHUB_TOKEN }}
         name: macOS
     - name: Archive Application
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: Conductor.app.tar.gz
         path: target/release/bundle/osx/Conductor.app.tar.gz
